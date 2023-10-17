@@ -5,11 +5,12 @@
 
 /**
  * Decorateur rajoutant des fruit à un gateau
+ * Decorateur global. String fruit ajouter par l'utilisateur pour eviter la redondance de Decorateur
  * @author gburgues
  * @author boycos
  */
 public class DecorateurFruit extends Decorateur{
-    private String fruit;
+    private final String fruit;
     /**
      * Constructeur du decorateur de Gateaux
      *
@@ -22,7 +23,7 @@ public class DecorateurFruit extends Decorateur{
 
     /**
      * Getteur du gateau decorer de ces fruits
-     * @return
+     * @return name
      */
     public String getName(){
         return super.getName()+" aux "+ fruit;

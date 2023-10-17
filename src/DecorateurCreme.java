@@ -4,12 +4,13 @@
  */
 
 /**
- * Decorateur rajoutant des fruit à un gateau
+ * Decorateur rajoutant des cremes à un gateau
+ * Decorateur global. String cremes ajouter par l'utilisateur pour eviter la redondance de Decorateur
  * @author gburgues
  * @author boycos
  */
 public class DecorateurCreme extends Decorateur{
-    private String creme;
+    private final String creme;
     /**
      * Constructeur du decorateur de Gateaux
      *
@@ -22,7 +23,7 @@ public class DecorateurCreme extends Decorateur{
 
     /**
      * Getteur du gateau decorer de ces fruits
-     * @return
+     * @return name
      */
     public String getName(){
         return super.getName()+" a la "+ creme;
