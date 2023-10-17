@@ -24,8 +24,14 @@ public class Main {
         Gateau_Interface omg = new DecorateurCreme(new DecorateurFruit(gateaux,"myrtille"),"crème fouetté");
         System.out.println(omg.getName());
 
-        Gateau_Interface chouchou = new DecorateurCreme(new DecorateurCreme(gateaux,"crème fouetté"),"crème fouetté");
+        Gateau_Interface chouchou = new DecorateurCreme(new DecorateurCreme(choux,"crème fouetté"),"crème fouetté");
         System.out.println(chouchou.getName());
+
+        Gateau_Interface gateauDuSiecle = new DecorateurMeringue(new DecorateurFruit(gateaux,"citrons"));
+        System.out.println(gateauDuSiecle.getName());
+
+        Gateau_Interface gateauDuSiecleRate = new DecorateurFruit(new DecorateurMeringue(gateaux),"citrons");
+        System.out.println(gateauDuSiecleRate.getName());
 
         //Test du Composite
         Composite leGatoDeChou = new Composite("Tarte au Choux");

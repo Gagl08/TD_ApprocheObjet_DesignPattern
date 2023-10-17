@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author boycos
  */
 public class Decorateur implements Gateau_Interface {
-    private Gateau_Interface gateaux_decore;
+    private final Gateau_Interface gateaux_decore;
 
     /**
      * Constructeur du decorateur de Gateaux

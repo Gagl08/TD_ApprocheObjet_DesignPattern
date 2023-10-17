@@ -13,27 +13,27 @@ import java.util.List;
  */
 
 public class Composite implements Gateau_Interface {
-    private String nom;
-    private List<Gateau_Interface> gâteauxComposes;
+    private final String nom;
+    private final List<Gateau_Interface> gateauxComposes;
 
     public Composite(String nom) {
         this.nom = nom;
-        this.gâteauxComposes = new ArrayList<>();
+        this.gateauxComposes = new ArrayList<>();
     }
 
     public void addGateau(Gateau_Interface gateau) {
-        gâteauxComposes.add(gateau);
+        gateauxComposes.add(gateau);
     }
 
     public void removeGateau(Gateau_Interface gateau) {
-        gâteauxComposes.remove(gateau);
+        gateauxComposes.remove(gateau);
     }
 
     @Override
     public String getName() {
         StringBuilder nomComposite = new StringBuilder(nom);
-        for (Gateau_Interface gateau : gâteauxComposes) {
-            nomComposite.append(" avec ").append(gateau.getName());
+        for (Gateau_Interface gateau : gateauxComposes) {
+            nomComposite.append(" avec des ").append(gateau.getName());
         }
         return nomComposite.toString();
     }
@@ -47,7 +47,7 @@ public class Composite implements Gateau_Interface {
     @Override
     public int getTempsDeCuisson() {
         int tempsTotal = 0;
-        for (Gateau_Interface gateau : gâteauxComposes) {
+        for (Gateau_Interface gateau : gateauxComposes) {
             tempsTotal += gateau.getTempsDeCuisson();
         }
         return tempsTotal;
