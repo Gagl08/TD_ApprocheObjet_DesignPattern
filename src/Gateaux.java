@@ -8,49 +8,57 @@
  * @author gburgues
  * @author boycos
  */
-public class Gateaux implements Gateau_Interface{
-
+public class Gateaux implements Gateau_Interface {
     private String nom;
     private String recette;
     private int temps_de_cuisson;
-    private Ingredients ingredients;
 
-    /**
-     * constructeur de l'objet gateau
-     * @param nom du gateau
-     * @param recette de l objet gateau
-     * @param temps_de_cuisson en min du gateau
-     */
-    public Gateaux (String nom, String recette, int temps_de_cuisson ){
-        this.nom= nom;
-        this.recette=recette;
-        this.temps_de_cuisson=temps_de_cuisson;
-    }
+    private Gateaux() { } // Constructeur privé pour le Builder
 
-    /**
-     * getteur Name
-     * @return nom du gateau
-     */
     @Override
     public String getName() {
         return nom;
     }
 
-    /**
-     * getteur Recatte
-     * @return Recette du gateau
-     */
     @Override
     public String getRecette() {
         return recette;
     }
 
-    /**
-     * getteur TempsDeCuisson
-     * @return Temps_de_cuisson du gateau
-     */
     @Override
     public int getTempsDeCuisson() {
         return temps_de_cuisson;
+    }
+
+    public static class Builder extends GateauBuilder {
+        public Builder(String nom, String recette, int temps_de_cuisson) {
+            this.nom = nom;
+            this.recette = recette;
+            this.temps_de_cuisson = temps_de_cuisson;
+        }
+
+        @Override
+        public Gateau_Interface build() {
+            Gateaux gateau = new Gateaux();
+            gateau.nom = nom;
+            gateau.recette = recette;
+            gateau.temps_de_cuisson = temps_de_cuisson;
+            return gateau;
+        }
+
+        @Override
+        public GateauBuilder withNom(String nom) {
+            return this;
+        }
+
+        @Override
+        public GateauBuilder withRecette(String recette) {
+            return this;
+        }
+
+        @Override
+        public GateauBuilder withTempsDeCuisson(int temps_de_cuisson) {
+            return this;
+        }
     }
 }

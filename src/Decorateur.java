@@ -3,8 +3,6 @@
  * Projet universitaire                         2023/2024
  */
 
-import java.util.ArrayList;
-
 /**
  *
  * @author gburgues
