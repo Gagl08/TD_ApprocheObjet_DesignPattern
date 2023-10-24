@@ -7,6 +7,8 @@ package fr_u_bordeaux_td_designPattern.decorateur;
 
 import fr_u_bordeaux_td_designPattern.*;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author gburgues
@@ -47,5 +49,14 @@ public class Decorateur implements Gateau_Interface {
     @Override
     public int getTempsDeCuisson() {
         return gateaux_decore.getTempsDeCuisson();
+    }
+
+    /**
+     * getteur TempsDeCuisson
+     * @return Temps_de_cuisson du gateau
+     */
+    @Override
+    public ArrayList<Ingredients> getIngredients() {
+        return gateaux_decore.getIngredients();
     }
 }

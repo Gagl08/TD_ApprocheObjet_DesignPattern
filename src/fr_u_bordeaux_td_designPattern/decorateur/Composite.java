@@ -54,4 +54,9 @@ public class Composite implements Gateau_Interface {
         }
         return tempsTotal;
     }
+
+    @Override
+    public ArrayList<Ingredients> getIngredients() {
+        return null;
+    }
 }

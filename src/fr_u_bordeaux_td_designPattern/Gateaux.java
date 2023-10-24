@@ -1,7 +1,11 @@
-package fr_u_bordeaux_td_designPattern;/*
+/*
  * Approche Objet Design Pattern
  * Projet universitaire                         2023/2024
  */
+
+package fr_u_bordeaux_td_designPattern;
+
+import java.util.ArrayList;
 
 /**
  * Objet dérivant un gateau
@@ -12,6 +16,7 @@ public class Gateaux implements Gateau_Interface {
     private String nom;
     private String recette;
     private int temps_de_cuisson;
+    private ArrayList<Ingredients> liste_ingredient;
 
     private Gateaux() { } // Constructeur privé pour le Builder
 
@@ -30,11 +35,16 @@ public class Gateaux implements Gateau_Interface {
         return temps_de_cuisson;
     }
 
+    @Override
+    public ArrayList<Ingredients> getIngredients(){return liste_ingredient;}
+
     public static class Builder extends GateauBuilder {
-        public Builder(String nom, String recette, int temps_de_cuisson) {
+        public Builder(String nom, String recette, int temps_de_cuisson,ArrayList<Ingredients> ingredients) {
             this.nom = nom;
             this.recette = recette;
             this.temps_de_cuisson = temps_de_cuisson;
+            this.liste_ingredient = new ArrayList<>();
+            this.liste_ingredient.addAll(ingredients);
         }
 
         @Override
@@ -43,6 +53,7 @@ public class Gateaux implements Gateau_Interface {
             gateau.nom = nom;
             gateau.recette = recette;
             gateau.temps_de_cuisson = temps_de_cuisson;
+            gateau.liste_ingredient= liste_ingredient;
             return gateau;
         }
 
@@ -60,5 +71,8 @@ public class Gateaux implements Gateau_Interface {
         public GateauBuilder withTempsDeCuisson(int temps_de_cuisson) {
             return this;
         }
+
+        @Override
+        public GateauBuilder withListe_ingredient (ArrayList liste_ingredient){return this;}
     }
 }

@@ -7,7 +7,9 @@
 
  import fr_u_bordeaux_td_designPattern.*;
 
-/**
+ import java.util.ArrayList;
+
+ /**
  * code.decorateur.Decorateur rajoutant des cremes à un gateau
  * code.decorateur.Decorateur global. String cremes ajouter par l'utilisateur pour eviter la redondance de code.decorateur.Decorateur
  * @author gburgues
@@ -31,5 +33,15 @@ public class DecorateurCreme extends Decorateur{
      */
     public String getName(){
         return super.getName()+" a la "+ creme;
+    }
+
+     /**
+      * Getteur des Ingredient du gateau en ajoutant la creme
+      * @return Arraylist Ingredient
+      */
+    public ArrayList<Ingredients> getIngredients(){
+        Ingredients ingredients= new Ingredients(creme);
+        super.getIngredients().add(ingredients);
+        return super.getIngredients();
     }
 }

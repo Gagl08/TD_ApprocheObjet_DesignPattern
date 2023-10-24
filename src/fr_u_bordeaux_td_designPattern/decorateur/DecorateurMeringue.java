@@ -7,6 +7,8 @@ package fr_u_bordeaux_td_designPattern.decorateur;
 
 import fr_u_bordeaux_td_designPattern.*;
 
+import java.util.ArrayList;
+
 /**
  * code.decorateur.Decorateur rajoutant des fruit à un gateau
  * code.decorateur.Decorateur global. String fruit ajouter par l'utilisateur pour eviter la redondance de code.decorateur.Decorateur
@@ -29,6 +31,16 @@ public class DecorateurMeringue extends Decorateur{
      */
     public String getName(){
         return super.getName()+" meringué";
+    }
+
+    /**
+     * Getteur des Ingredient du gateau en ajoutant la creme
+     * @return Arraylist Ingredient
+     */
+    public ArrayList<Ingredients> getIngredients(){
+        Ingredients ingredients= new Ingredients("meringue");
+        super.getIngredients().add(ingredients);
+        return super.getIngredients();
     }
 }
 

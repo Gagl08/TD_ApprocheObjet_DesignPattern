@@ -11,9 +11,14 @@ import java.util.ArrayList;
  * @author boycos
  */
 public class Ingredients {
-    private ArrayList<String> liste_ingredient = new ArrayList<>();
+    private String ingredient;
 
     public Ingredients (String ingredient){
-        this.liste_ingredient.add(ingredient);
+        this.ingredient=ingredient;
     }
+
+    public String getName() {
+        return ingredient;
+    }
+
 }
