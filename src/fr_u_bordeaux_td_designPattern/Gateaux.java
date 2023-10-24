@@ -1,10 +1,10 @@
-/*
+package fr_u_bordeaux_td_designPattern;/*
  * Approche Objet Design Pattern
  * Projet universitaire                         2023/2024
  */
 
 /**
- * Objet dcrivant un gateau
+ * Objet dérivant un gateau
  * @author gburgues
  * @author boycos
  */

@@ -2,24 +2,32 @@
  * Approche Objet Design Pattern
  * Projet universitaire                         2023/2024
  */
+package fr_u_bordeaux_td_designPattern.test;
+
+import fr_u_bordeaux_td_designPattern.decorateur.Composite;
+import fr_u_bordeaux_td_designPattern.decorateur.DecorateurCreme;
+import fr_u_bordeaux_td_designPattern.decorateur.DecorateurFruit;
+import fr_u_bordeaux_td_designPattern.decorateur.DecorateurMeringue;
+
+import fr_u_bordeaux_td_designPattern.*;
 
 /**
- * Main des tests
+ * fr_u_bordeaux_td_designPattern.test.Main des tests
  * @author gburgues
  * @author boycos
  */
 public class Main {
 
     /**
-     * Main de l activité
+     * fr_u_bordeaux_td_designPattern.test.Main de l activité
      */
     public static void main(String[] args) {
 
         // Test des Decorateurs
         // 1er Question on declarait les gateux comme ceci
 
-        // Gateaux gateaux = new Gateaux("tarte","ajeter a leclerc",190);
-        // Gateaux choux = new Gateaux("choux","ajeter a leclerc",190);
+        // code.Gateaux gateaux = new code.Gateaux("tarte","ajeter a leclerc",190);
+        // code.Gateaux choux = new code.Gateaux("choux","ajeter a leclerc",190);
 
         Gateau_Interface gateaux = new Gateaux.Builder("tarte", "Recette du gâteau au chocolat", 30)
                 .withRecette("Recette mise à jour")
@@ -47,7 +55,7 @@ public class Main {
         Gateau_Interface gateauDuSiecleRate = new DecorateurFruit(new DecorateurMeringue(gateaux),"citrons");
         System.out.println(gateauDuSiecleRate.getName());
 
-        //Test du Composite
+        //Test du code.decorateur.Composite
         Composite leGatoDeChou = new Composite("Tarte au Choux");
         leGatoDeChou.addGateau(fruit);
         leGatoDeChou.addGateau(chouchou);

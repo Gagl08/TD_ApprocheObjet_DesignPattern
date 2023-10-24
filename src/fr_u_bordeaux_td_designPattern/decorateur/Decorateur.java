@@ -3,6 +3,10 @@
  * Projet universitaire                         2023/2024
  */
 
+package fr_u_bordeaux_td_designPattern.decorateur;
+
+import fr_u_bordeaux_td_designPattern.*;
+
 /**
  *
  * @author gburgues
@@ -12,8 +16,8 @@ public class Decorateur implements Gateau_Interface {
     private final Gateau_Interface gateaux_decore;
 
     /**
-     * Constructeur du decorateur de Gateaux
-     * @param gateaux_decore a rajouter un Decorateur
+     * Constructeur du code.decorateur de code.Gateaux
+     * @param gateaux_decore a rajouter un code.decorateur.Decorateur
      */
     public Decorateur(Gateau_Interface gateaux_decore){
         this.gateaux_decore = gateaux_decore;

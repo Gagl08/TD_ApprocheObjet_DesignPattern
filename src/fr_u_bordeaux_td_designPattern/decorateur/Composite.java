@@ -2,12 +2,14 @@
  * Approche Objet Design Pattern
  * Projet universitaire                         2023/2024
  */
+package fr_u_bordeaux_td_designPattern.decorateur;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import fr_u_bordeaux_td_designPattern.*;
 /**
- * Design Pattern Composite de GateauInterface
+ * Design Pattern code.decorateur.Composite de GateauInterface
  * @author gburgues
  * @author boycos
  */
