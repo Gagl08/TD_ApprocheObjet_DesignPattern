@@ -18,7 +18,6 @@ import java.util.ArrayList;
 public class DecorateurMeringue extends Decorateur{
     /**
      * Constructeur du code.decorateur de code.Gateaux
-     *
      * @param gateaux_decore a rajouter un code.decorateur.Decorateur
      */
     public DecorateurMeringue(Gateau_Interface gateaux_decore) {

@@ -6,7 +6,6 @@
  package fr_u_bordeaux_td_designPattern.decorateur;
 
  import fr_u_bordeaux_td_designPattern.*;
-
  import java.util.ArrayList;
 
  /**

@@ -98,5 +98,32 @@ public class Main {
         System.out.println("Temps de cuisson du chou : " + chou.getTempsDeCuisson() + " minutes");
         System.out.println("Recette de la tarte : " + tarte.getRecette());
 
+        GateauFactory factory = new GateauFactory();
+
+        // Création d'un gâteau
+        Gateau_Interface gateauF = factory.createGateau("gateau", "Gateau au chocolat", "Recette du gâteau au chocolat", 45, ingredients);
+        System.out.println(gateauF.getName()+ "\n"
+                + gateauF.getRecette()+"\n"
+                + gateauF.getTempsDeCuisson()+"\n");
+        for( Ingredients a : gateauF.getIngredients()) {
+            System.out.println(a.getName() + "\t");
+        }
+        // Création d'un chou
+        Gateau_Interface chouF = factory.createGateau("chou", "Chou à la crème", "Recette du chou à la crème", 30, ingredients);
+        System.out.println(chouF.getName()+ "\n"
+                + chouF.getRecette()+"\n"
+                + chouF.getTempsDeCuisson()+"\n");
+        for( Ingredients a : chouF.getIngredients()) {
+            System.out.println(a.getName() + "\t");
+        }
+        // Création d'une tarte
+        Gateau_Interface tarteF = factory.createGateau("tarte", "Tarte aux fruits", "Recette de la tarte aux fruits", 60, ingredients);
+        System.out.println(tarteF.getName()+ "\n"
+                + tarteF.getRecette()+"\n"
+                + tarteF.getTempsDeCuisson()+"\n");
+        for( Ingredients a : tarteF.getIngredients()) {
+            System.out.println(a.getName() + "\t");
+        }
+
     }
 }

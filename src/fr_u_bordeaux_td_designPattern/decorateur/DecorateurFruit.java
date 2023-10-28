@@ -19,7 +19,6 @@ public class DecorateurFruit extends Decorateur{
     private final String fruit;
     /**
      * Constructeur du code.decorateur de code.Gateaux
-     *
      * @param gateaux_decore a rajouter un code.decorateur.Decorateur
      */
     public DecorateurFruit(Gateau_Interface gateaux_decore, String fruit) {

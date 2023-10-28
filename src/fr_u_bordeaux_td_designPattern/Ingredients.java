@@ -1,9 +1,9 @@
-package fr_u_bordeaux_td_designPattern;/*
+/*
  * Approche Objet Design Pattern
  * Projet universitaire                         2023/2024
  */
 
-import java.util.ArrayList;
+package fr_u_bordeaux_td_designPattern;
 
 /**
  * Objet contenant les code.Ingredients d'un Gateau
@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author boycos
  */
 public class Ingredients {
-    private String ingredient;
+    private final String ingredient;
 
     public Ingredients (String ingredient){
         this.ingredient=ingredient;

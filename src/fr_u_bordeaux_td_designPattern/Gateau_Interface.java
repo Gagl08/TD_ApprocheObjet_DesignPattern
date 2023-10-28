@@ -11,8 +11,8 @@ import java.util.ArrayList;
  * @author boycos
  */
 public interface Gateau_Interface {
-    public String getName();
-    public String getRecette();
-    public int getTempsDeCuisson();
-    public ArrayList<Ingredients> getIngredients();
+    String getName();
+    String getRecette();
+    int getTempsDeCuisson();
+    ArrayList<Ingredients> getIngredients();
 }

@@ -10,7 +10,7 @@ import fr_u_bordeaux_td_designPattern.*;
 import java.util.ArrayList;
 
 /**
- *
+ * Decorateur General d'un gateau
  * @author gburgues
  * @author boycos
  */
