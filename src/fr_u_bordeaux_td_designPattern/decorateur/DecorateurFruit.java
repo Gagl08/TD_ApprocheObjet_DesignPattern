@@ -36,7 +36,7 @@ public class DecorateurFruit extends Decorateur{
     }
 
     /**
-     * Getteur des Ingredient du gateau en ajoutant la creme
+     * Getteur des Ingredient du gateau en ajoutant le fruit
      * @return Arraylist Ingredient
      */
     public ArrayList<Ingredients> getIngredients(){
