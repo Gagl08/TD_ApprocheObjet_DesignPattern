@@ -6,7 +6,6 @@
 package fr_u_bordeaux_td_designPattern.decorateur;
 
 import fr_u_bordeaux_td_designPattern.*;
-
 import java.util.ArrayList;
 
 /**
@@ -58,5 +57,13 @@ public class Decorateur implements Gateau_Interface {
     @Override
     public ArrayList<Ingredients> getIngredients() {
         return gateaux_decore.getIngredients();
+    }
+
+    @Override
+    public void update() {
+    }
+
+    @Override
+    public void vendre(Patissier patissier) {
     }
 }

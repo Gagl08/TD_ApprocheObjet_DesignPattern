@@ -1,7 +1,9 @@
-package fr_u_bordeaux_td_designPattern;/*
+/*
  * Approche Objet Design Pattern
  * Projet universitaire                         2023/2024
  */
+
+package fr_u_bordeaux_td_designPattern;
 
 import java.util.ArrayList;
 
@@ -15,4 +17,6 @@ public interface Gateau_Interface {
     String getRecette();
     int getTempsDeCuisson();
     ArrayList<Ingredients> getIngredients();
+    void update();
+    void vendre(Patissier patissier);
 }

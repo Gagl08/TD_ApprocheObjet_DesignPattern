@@ -86,4 +86,12 @@ public class Composite implements Gateau_Interface {
     public ArrayList<Ingredients> getIngredients() {
         return null;
     }
+
+    @Override
+    public void update() {
+    }
+
+    @Override
+    public void vendre(Patissier patissier) {
+    }
 }

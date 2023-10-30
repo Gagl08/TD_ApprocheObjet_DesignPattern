@@ -1,7 +1,17 @@
+/*
+ * Approche Objet Design Pattern
+ * Projet universitaire                         2023/2024
+ */
+
 package fr_u_bordeaux_td_designPattern;
 
 import java.util.ArrayList;
 
+/**
+ * Objet décrivant un Chou
+ * @author gburgues
+ * @author boycos
+ */
 public class Chou implements Gateau_Interface {
     private final String nom;
     private final String recette;
@@ -34,6 +44,14 @@ public class Chou implements Gateau_Interface {
     @Override
     public ArrayList<Ingredients> getIngredients() {
         return liste_ingredient;
+    }
+
+    @Override
+    public void update() {
+    }
+
+    @Override
+    public void vendre(Patissier patissier) {
     }
 
 }

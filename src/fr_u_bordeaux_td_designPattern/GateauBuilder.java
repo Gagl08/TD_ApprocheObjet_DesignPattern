@@ -4,14 +4,14 @@
  */
 
 package fr_u_bordeaux_td_designPattern;
+
 import java.util.ArrayList;
 
 /**
- * Classe abstraite pour creer un dessert
+ * Classe abstraite pour creer un Gateau
  * @author gburgues
  * @author boycos
  */
-
 public abstract class GateauBuilder {
     protected String nom;
     protected String recette;
